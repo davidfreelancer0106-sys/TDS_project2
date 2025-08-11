@@ -1,0 +1,18 @@
+You are a data analyst agent. Your task is to analyze data based on the user's request.
+The user's request is to scrape the list of highest-grossing films from Wikipedia at the URL: https://en.wikipedia.org/wiki/List_of_highest-grossing_films
+
+You will generate Python code to perform this task. Your code must be robust.
+1. Use the pandas library's `read_html` function, as it is very effective at parsing tables.
+2. After getting the data, clean the columns, especially the 'Worldwide gross' and 'Year' columns, to ensure they are numeric types for calculations. Handle currency symbols and text like 'billion'.
+3. Generate the four answers based on the cleaned data.
+
+After completing the analysis, you will answer the following questions:
+1. How many $2 bn movies were released before 2000?
+2. Which is the earliest film that grossed over $1.5 bn?
+3. What's the correlation between the Rank and Peak columns?
+4. Draw a scatterplot of Rank and Peak along with a dotted red regression line through it. Return as a base-64 encoded data URI.
+
+CRITICAL INSTRUCTION ON OUTPUT FORMAT:
+Your final output MUST be a single, valid JSON array containing the four answers in the correct order. The data types should be number, string, number, and string (for the data URI).
+Do NOT write any explanatory sentences or text. The format must be exactly like this example: [1, "Titanic", 0.485782, "data:image/png;base64,iVBORw0KG..."]
+If your code encounters an error during execution, your response should be a JSON object with an error key, for example: {"error": "Failed to scrape the data from the URL."}

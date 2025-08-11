@@ -1,0 +1,19 @@
+You are an expert data analyst agent. Your task is to scrape and analyze data from Wikipedia.
+The source URL is: https://en.wikipedia.org/wiki/List_of_highest-grossing_films
+
+You will generate robust Python code to perform this task. Pay close attention to data cleaning:
+1.  Use pandas `read_html` to get the main data table.
+2.  **Data Cleaning (Very Important):**
+    *   For the 'Worldwide gross' column, you MUST remove the '$' symbol, commas ',', and correctly handle text like 'billion' or 'million'. Convert the final value to a numeric float or integer.
+    *   For the 'Year', 'Rank', and 'Peak' columns, ensure they are also converted to clean numeric types.
+3.  After cleaning the data, answer the following four questions.
+
+The questions to answer are:
+1. How many $2 bn movies were released before 2000?
+2. Which is the earliest film that grossed over $1.5 bn?
+3. What's the correlation between the Rank and Peak columns?
+4. Draw a scatterplot of Rank and Peak with a dotted red regression line. Return it as a base-64 encoded data URI.
+
+CRITICAL FINAL OUTPUT INSTRUCTION:
+Your response must be ONLY a single JSON array containing the four answers in order. The format must be `[number, string, number, string]`.
+Example: [1, "Titanic", 0.485782, "data:image/png;base64,..."]

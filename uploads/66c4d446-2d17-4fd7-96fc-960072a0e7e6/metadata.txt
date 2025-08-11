@@ -1,0 +1,5 @@
+Data source: https://en.wikipedia.org/wiki/List_of_highest-grossing_films
+
+Error: Could not find the expected table on the page.
+Expected JSON Answer Format:
+[1, "Titanic", 0.485782, "data:image/png;base64,..."]

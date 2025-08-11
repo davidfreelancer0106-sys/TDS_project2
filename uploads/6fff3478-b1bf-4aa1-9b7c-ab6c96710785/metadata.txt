@@ -1,0 +1,5 @@
+No table with class 'wikitable sortable' found on the page.
+
+
+--- Expected JSON Answer Format ---
+The answers will be in a JSON array of strings, e.g., ["Answer to Q1", "Answer to Q2"]
